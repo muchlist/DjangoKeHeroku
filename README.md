@@ -1,4 +1,4 @@
-# DjangoKeHeroku
+# Upload Django Ke Heroku
 Konfigurasi untuk mengupload Django Ke Heroku
 
 ## Buat folder project
