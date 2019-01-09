@@ -110,7 +110,7 @@ jangan lupa untuk mengambil alamat aplikasinya
 * heroku run python3 manage.py createsuperuser
 
 ## EXTRAS
-### disable collectstatic
+### Disable collectstatic
 * heroku config:set DISABLE_COLLECTSTATIC=1
 
 ### Merubah configurasi (DEBUG=False jika sudah tahap produksi)
