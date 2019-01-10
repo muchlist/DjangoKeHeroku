@@ -94,7 +94,8 @@ jangan lupa untuk mengambil alamat aplikasinya
 
 ### Kirimkan file konfigurasi .env ke Heroku ( kamu harus berada di dalam folder dimana file .env berada)
 * heroku plugins:install heroku-config
-* heroku config:push -a
+* heroku app
+* heroku config:push -app namaapps di heroku
 
 ### Untuk menampilkan heroku config yang sudah di upload
 * heroku config 
@@ -102,6 +103,9 @@ jangan lupa untuk mengambil alamat aplikasinya
 ## Publish app
 * git add .
 * git commit -m 'Configuring the app'
+* git remote -v , untuk melihat remote
+* git remote add heroku https://git.heroku.com/meretas.git
+* heroku --buildpack heroku/python
 * git push heroku master --force
 
 ## Membuat data base
