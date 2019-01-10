@@ -66,6 +66,13 @@ pip install dj-static
 
 ### Settings.py
 * STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+* STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+## Whitenoise
+* pip install whitenoise
+* masukkan whitenoise ke requirement
+* masukkan ke setting midleware  == 'whitenoise.middleware.WhiteNoiseMiddleware',
 
 ## Buat sebuah requirements-dev.txt
 pip freeze > requirements-dev.txt
@@ -106,13 +113,13 @@ jangan lupa untuk mengambil alamat aplikasinya
 * git remote -v , untuk melihat remote
 * git remote add heroku https://git.heroku.com/meretas.git
 * heroku --buildpack heroku/python
-* git push heroku master --force
+* git push heroku master
 
 ## Membuat data base
-* heroku run python3 manage.py migrate
+* heroku run python manage.py migrate
 
 ## Membuat Django admin user
-* heroku run python3 manage.py createsuperuser
+* heroku run python manage.py createsuperuser
 
 ## EXTRAS
 ### Disable collectstatic
