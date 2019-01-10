@@ -37,6 +37,7 @@ Konfigurasi untuk mengupload Django Ke Heroku
 * buat file .env di folder utama dan masukkan variabel berikut
 - SECRET_KEY=Your$eCretKeyHere (secrety key dari settings.py dipindah kesini dengan maksud keamanan)
 - DEBUG=True
+* jangan lupa masukkan .env didalam file .gitignore
 
 ### Settings.py
 * from decouple import config
@@ -74,8 +75,8 @@ pip freeze > requirements-dev.txt
 * gunicorn
 * psycopg2
 
-## Membuat file Procfile dan tambahkan code berikut
-* web: gunicorn website.wsgi --log-file -
+## Membuat file Procfile di folder root dan tambahkan code berikut
+* web: gunicorn namaapps.wsgi --log-file -
 
 ## Membuat file runtime.txt dan tambahkan core
 * python-3.6.0
@@ -86,7 +87,7 @@ Install dulu heroku cli di komputer ( http://bit.ly/2jCgJYW )
 jangan lupa untuk mengambil alamat aplikasinya
 
 ## Setting allowed hosts
-* masukkan alamat heroku di ALLOWED_HOSTS pada settings.py (django)- Hanya domainnya saja, pastikan juga membuatport protokol dan slash
+* masukkan alamat heroku di ALLOWED_HOSTS pada settings.py (django)- Hanya domainnya saja, (ALLOWED_HOSTS = ['meretas.herokuapp.com',])
 
 ## Install heroku config plugin
 * heroku plugins:install heroku-config
