@@ -124,6 +124,12 @@ jangan lupa untuk mengambil alamat aplikasinya
 ## EXTRAS
 ### Disable collectstatic
 * heroku config:set DISABLE_COLLECTSTATIC=1
+* heroku run python manage.py collectstatic
+
+## django-heroku
+*pip install django-heroku
+* setting.py paling bawah > import django_heroku
+* setting.py paling bawah > django_heroku.settings(local())
 
 ### Merubah configurasi (DEBUG=False jika sudah tahap produksi)
 * heroku config:set DEBUG=True
